@@ -1,7 +1,7 @@
 ﻿using System;
 namespace opp_project.Model
 {
-    public abstract class Bird
+    public abstract class Bird : IDance
     {
         public string Name { get; private set; }
         public string Color { get; private set; }
@@ -17,6 +17,21 @@ namespace opp_project.Model
         public virtual void Fly()
         {
             Console.WriteLine($"I'm {Name} and I can fly high in the blue sky!");
+        }
+
+        public void Spin()
+        {
+            Console.WriteLine($"{Name} spin!");
+        }
+
+        public void DoTheCaterpillar()
+        {
+            Console.WriteLine($"{Name} do the wriggly woo!");
+        }
+
+        public void Jump()
+        {
+            Console.WriteLine($"{Name} jump in the air!");
         }
     }
 }
